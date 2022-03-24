@@ -29,6 +29,5 @@ export async function getServerSideProps() {
     .then((res) => res.data);
   return {
     props: { data: data?.slice(0, 3) },
-    revalidate: 60,
   };
 }
