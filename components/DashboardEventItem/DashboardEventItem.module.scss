@@ -1,0 +1,47 @@
+.event {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px #ddd solid;
+  background-color: #f4f4f4;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.event h4 {
+  margin-bottom: 10px;
+  flex: 2;
+  a {
+    color: #000;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.edit,
+.delete {
+  margin: 10px;
+  svg {
+    margin-right: 4px;
+  }
+}
+.control {
+  display: flex;
+}
+.delete {
+  color: red;
+  border: 0;
+  background-color: inherit;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .event {
+    display: flex;
+    flex-direction: column;
+  }
+}

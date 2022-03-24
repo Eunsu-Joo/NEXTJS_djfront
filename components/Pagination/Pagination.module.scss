@@ -1,0 +1,17 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  a {
+    display: flex;
+    align-items: center;
+    margin: 0 16px;
+  }
+}
+.pagination * {
+  color: #000;
+  font-size: 22px;
+}
+.current {
+  text-decoration: underline;
+}

@@ -1,0 +1,39 @@
+.event {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+  padding: 13px;
+  box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.1);
+  background-color: #f8f8f8;
+}
+
+.img {
+  flex: 1;
+  margin: 10px;
+}
+
+.info {
+  flex: 3;
+  p {
+    font-size: 14px;
+    margin: 0;
+    span {
+      font-weight: 600;
+    }
+  }
+}
+.link {
+  margin-right: 14px;
+}
+@media (max-width: 600px) {
+  .event {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .info {
+    margin-bottom: 20px;
+  }
+}

@@ -1,0 +1,37 @@
+.file {
+  h1 {
+    text-align: center;
+  }
+  div {
+    border: 1px #ccc solid;
+    background-color: #f4f4f4;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    p {
+      width: 100px;
+      word-wrap: normal;
+      word-break: keep-all;
+    }
+  }
+  input {
+    outline: 0 !important;
+  }
+  input[type="submit"] {
+    margin: 20px 0;
+  }
+  input[type="file"] {
+    display: none;
+  }
+}
+.fileBtn {
+  display: inline-flex !important;
+  justify-content: center;
+  align-items: center;
+  padding: 2px 14px;
+  background-color: steelblue;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
