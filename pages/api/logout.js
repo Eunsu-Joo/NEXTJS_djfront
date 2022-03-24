@@ -1,5 +1,6 @@
 import { API_URL, FORBIDDEN_CODE, NOT_ALLOWED_CODE } from "@/config/index";
 import cookie from "cookie";
+// eslint-disable-next-line import/no-anonymous-default-export
 export default async (req, res) => {
   if (req.method === "POST") {
     res.setHeader(

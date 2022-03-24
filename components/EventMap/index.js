@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable jsx-a11y/alt-text */
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import { Map, Marker, NavigationControl } from "react-map-gl";

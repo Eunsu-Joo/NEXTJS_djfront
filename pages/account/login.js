@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { FaUser } from "react-icons/fa";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
