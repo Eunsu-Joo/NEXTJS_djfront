@@ -24,7 +24,7 @@ export default function AboutPage() {
               If you add some Events, Please <Link href="/account/login">Login</Link>{" "}
             </p>
             <p>
-              Don't have an account? <Link href="/account/register">Register</Link>
+              Dont have an account? <Link href="/account/register">Register</Link>
             </p>
           </div>
         </div>
