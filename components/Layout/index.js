@@ -1,13 +1,10 @@
 import Head from "next/head";
-import { useRouter } from "next/router";
 import Footer from "../Footer";
 import Header from "../Header";
 import Showcase from "../Showcase";
 import styles from "./Layout.module.scss";
 
 export default function Layout({ title, keywords, description, children }) {
-  const router = useRouter();
-
   return (
     <div>
       <Head>

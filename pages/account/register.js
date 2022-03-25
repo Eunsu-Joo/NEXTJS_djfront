@@ -5,14 +5,12 @@ import { useState, useEffect, useContext } from "react";
 import Link from "next/link";
 import Layout from "@/components/Layout";
 import AuthContext from "@/context/AuthContext";
-import { useRouter } from "next/router";
 export default function RegisterPage() {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [passwordConfirm, setPasswordConfirm] = useState("");
-  const { register, error, user } = useContext(AuthContext);
-  const router = useRouter();
+  const { register, error } = useContext(AuthContext);
   useEffect(() => error && toast.error(error));
   const pwRegEx = /(?=.*[a-z])(?=.*[A-Z]).{6,15}/;
   const handleSubmit = (e) => {
@@ -81,7 +79,6 @@ export default function RegisterPage() {
           </div>
           <input type="submit" value="Login" className="btn" />
         </form>
-
         <p>
           Already have an account? <Link href="/account/login">Login</Link>
         </p>

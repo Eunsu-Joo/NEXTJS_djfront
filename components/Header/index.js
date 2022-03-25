@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { FaSignInAlt, FaSignOutAlt, FaRegBell } from "react-icons/fa";
+import { FaSignInAlt, FaSignOutAlt } from "react-icons/fa";
 import Link from "next/link";
 import styles from "./Header.module.scss";
 import Search from "../Search";

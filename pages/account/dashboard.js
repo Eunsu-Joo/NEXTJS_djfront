@@ -1,5 +1,5 @@
 import Layout from "@/components/Layout";
-import React, { useEffect } from "react";
+import React from "react";
 import { parseCookie } from "@/helpers/index";
 import axios from "axios";
 import { API_URL } from "@/config/index";

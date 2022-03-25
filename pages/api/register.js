@@ -1,5 +1,5 @@
 /* eslint-disable import/no-anonymous-default-export */
-import { API_URL, NOT_FOUND_CODE, SUCCESS_CODE } from "@/config/index";
+import { API_URL, SUCCESS_CODE } from "@/config/index";
 import cookie from "cookie";
 export default async (req, res) => {
   if (req.method === "POST") {
