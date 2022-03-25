@@ -1,5 +1,5 @@
 /* eslint-disable import/no-anonymous-default-export */
-import { API_URL, SUCCESS_CODE } from "@/config/index";
+import { API_URL, NOT_FOUND_CODE, SUCCESS_CODE } from "@/config/index";
 import cookie from "cookie";
 export default async (req, res) => {
   if (req.method === "POST") {
@@ -29,7 +29,7 @@ export default async (req, res) => {
       );
       res.status(SUCCESS_CODE).json({ user: data.user });
     } else {
-      res.status(strApi.status).json({ message: data.error.name });
+      res.status(strApi.status).json({ message: "Email or username duplicate. use another one" });
     }
   } else {
     res.setHeader("Allow", ["POST"]);

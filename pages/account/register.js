@@ -11,31 +11,28 @@ export default function RegisterPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [passwordConfirm, setPasswordConfirm] = useState("");
-  const { register, error } = useContext(AuthContext);
+  const { register, error, user } = useContext(AuthContext);
   const router = useRouter();
   useEffect(() => error && toast.error(error));
   const pwRegEx = /(?=.*[a-z])(?=.*[A-Z]).{6,15}/;
   const handleSubmit = (e) => {
     e.preventDefault();
     const isEmptyFiled = Object.values({ username, email, password }).some((elem) => elem === "");
+
     if (isEmptyFiled) {
       toast.error("Please fill all inputs");
       return false;
-    } else {
-      if (password !== passwordConfirm) {
-        toast.error("Password do not match");
-        return false;
-      }
-      if (!pwRegEx.test(password)) {
-        toast.error("Password must includes 6 to 15 letters and at least 1 uppercase letter");
-        return false;
-      }
-      register(username, email, password);
-      toast.success("Success Register!");
-      setTimeout(() => {
-        router.push("/account/dashboard");
-      }, 1500);
     }
+    if (password !== passwordConfirm) {
+      toast.error("Password do not match");
+      return false;
+    }
+    if (!pwRegEx.test(password)) {
+      toast.error("Password must includes 6 to 15 letters and at least 1 uppercase letter");
+      return false;
+    }
+    register(username, email, password);
+    toast.success("Success Register!");
   };
 
   return (

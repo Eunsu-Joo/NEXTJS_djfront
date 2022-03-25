@@ -25,6 +25,9 @@ export const AuthProvider = ({ children }) => {
     const data = await res.json();
     if (res.status === SUCCESS_CODE) {
       setUser(data.user);
+      setTimeout(() => {
+        router.push("/account/dashboard");
+      }, 1500);
     } else {
       setError(data.message);
       setError(null);
