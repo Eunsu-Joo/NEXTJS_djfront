@@ -97,3 +97,17 @@
     font-size: 50px;
   }
 }
+.aboutPage {
+  .contents {
+    display: flex;
+    h3 {
+      font-size: 24px;
+      display: flex;
+      align-items: center;
+      span {
+        font-size: 24px;
+        padding-right: 16px;
+      }
+    }
+  }
+}
