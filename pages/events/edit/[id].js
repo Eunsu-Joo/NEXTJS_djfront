@@ -41,6 +41,13 @@ export default function EditPage({ data, token }) {
       toast.error("Please Fill all fields");
       return false;
     } else {
+      if (evt.image.data && evt.image.data.attributes.url !== imgPreview) {
+        await axios
+          .delete(`${API_URL}/api/upload/files/${evt.image.data.id}`, {
+            headers: { Authorization: `Bearer ${token}` },
+          })
+          .catch((err) => toast.error(`image error! ${err}`));
+      }
       const res = await fetch(`${API_URL}/api/events/${data.id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json", Authorization: `Bearer ${token}` },
