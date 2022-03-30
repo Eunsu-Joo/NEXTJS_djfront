@@ -18,7 +18,7 @@ export default function LoginPage() {
     login({ email, password });
   };
   return (
-    <Layout title="User Login">
+    <Layout title="로그인 페이지">
       <div className="authPage">
         <h1>
           <FaUser /> Log In

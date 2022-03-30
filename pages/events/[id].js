@@ -50,7 +50,7 @@ export default function EventPage({ data, token }) {
     }
   };
   return (
-    <Layout>
+    <Layout title={`디제잉 상세 ${evt.name} `}>
       <div className="eventPage">
         <span>
           {new Date(evt.date).toLocaleDateString("kr")} at {evt.time}

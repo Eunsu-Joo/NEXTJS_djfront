@@ -9,7 +9,7 @@ import qs from "qs";
 export default function SearchPage({ data }) {
   const router = useRouter();
   return (
-    <Layout title="search Result">
+    <Layout title={`${router.query.term} 검색결과`}>
       <Link href="/events">
         <a>
           {" "}

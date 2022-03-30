@@ -9,7 +9,7 @@ import StrapiLogo from "@/image/strapi.svg";
 import NextLogo from "@/image/Nextjs.svg";
 export default function AboutPage() {
   return (
-    <Layout>
+    <Layout title="소개 페이지">
       <div className="container aboutPage">
         <h1>About This Page</h1>
         <div className="contents">

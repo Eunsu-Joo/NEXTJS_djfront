@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function Home({ data }) {
   return (
-    <Layout>
+    <Layout title="디제잉 메인 페이지">
       <div className="main">
         <h1>Upcoming Events</h1>
         {data?.length === 0 && <h3>No Upcoming Events</h3>}

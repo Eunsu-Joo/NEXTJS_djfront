@@ -48,11 +48,13 @@ export default function EditPage({ data, token }) {
           })
           .catch((err) => toast.error(`image error! ${err}`));
       }
-      const res = await fetch(`${API_URL}/api/events/${data.id}`, {
+      const res = await fetch(`${API_URL}/api/events/${data.id}?populate=*`, {
         method: "PUT",
         headers: { "Content-Type": "application/json", Authorization: `Bearer ${token}` },
         body: JSON.stringify({ data: attributes }),
       });
+      const test = await res.json();
+      console.log(test);
       if (res.status === 401 || res.status === 403) {
         toast.error("No Authorization. Check your Account");
         return false;
@@ -75,7 +77,7 @@ export default function EditPage({ data, token }) {
     setIsShow(false);
   };
   return (
-    <Layout>
+    <Layout title={`디제잉 수정 ${evt.name}`}>
       <Link href="/events">
         <a>
           <BsArrowLeftShort /> Go Back

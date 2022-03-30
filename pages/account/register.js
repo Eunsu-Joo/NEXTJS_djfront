@@ -34,7 +34,7 @@ export default function RegisterPage() {
   };
 
   return (
-    <Layout title="User Registration">
+    <Layout title="회원가입 페이지">
       <div className="authPage">
         <h1>
           <FaUser /> Register

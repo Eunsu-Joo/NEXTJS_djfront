@@ -8,7 +8,7 @@ import qs from "qs";
 import Pagination from "@/components/Pagination";
 export default function EventsPage({ data, pagination }) {
   return (
-    <Layout>
+    <Layout title="디제잉 이벤트 전체">
       <h1>All Events</h1>
       {data?.length === 0 && <h3>No Upcoming Events</h3>}
       {data.map((evt) => (

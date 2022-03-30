@@ -39,7 +39,7 @@ export default function DashboardPage({ events, token }) {
     }
   };
   return (
-    <Layout title="User Dashboard">
+    <Layout title="사용자 대시보드">
       <div className="dashboardPage">
         <h1>Dashboard</h1>
         <h3>My Events</h3>

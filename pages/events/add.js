@@ -59,7 +59,7 @@ export default function AddEventPage({ token }) {
     setAttributes({ ...attributes, [name]: value });
   };
   return (
-    <Layout>
+    <Layout title="디제잉 이벤트 추가하기">
       <Link href="/events">
         <a>
           <BsArrowLeftShort /> Go Back
