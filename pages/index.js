@@ -23,7 +23,7 @@ export default function Home({ data }) {
   );
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const { data } = await axios
     .get(`${API_URL}/api/events?${POPULATE_FILTER}`)
     .then((res) => res.data);
